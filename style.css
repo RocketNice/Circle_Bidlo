@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    /*обнуление отступов*/
+    padding: 0;
+    /*обнуление полей*/
+    box-sizing: border-box;
+    /*ширина элемента включает рамки и отступы*/
+    font-family: consolas;
+    /*название шрифта*/
+}
+
+@font-face {
+    font-family: 'Opium';
+    src: url('./Opium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    display: flex;
+    /*гибкий контейнер*/
+    justify-content: center;
+    /*выравнивание по горизонтали*/
+    align-items: center;
+    /*выравнивание по вертикали*/
+    min-height: 100vh;
+    /*на весь экран*/
+}
+
+.circle {
+    position: relative;
+    /*относительное позиционирование*/
+    width: 200px;
+    /*ширина круга*/
+    height: 200px;
+    /*высота круга*/
+    border-radius: 50%;
+    /*скругление углов*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ccc;
+    /*цвет круга*/
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* animation: animate 10s linear infinite; */
+    /*свойства анимации*/
+}
+
+p span {
+    position: absolute;
+    left: 50%;
+    /*позиция слева*/
+    font-size: 19px;
+    /*размер шрифта*/
+    text-transform: uppercase;
+    /*большие буквы*/
+    transform-origin: 0 100px;
+    /*точка исхода трансформации*/
+    font-family: 'Opium';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#Test {
+    font-family: 'Opium';
+    font-weight: normal;
+    font-style: normal;
+    /* Thanks to Herb Caudill comment */
+    font-size: 19px;
+    /*размер шрифта*/
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 305px;
+}
